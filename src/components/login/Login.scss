@@ -1,0 +1,29 @@
+@import "~open-color/open-color";
+
+.div-center {
+  width: 500px;
+  position: absolute;
+  left: 50%;
+  margin-left: -250px;
+}
+
+.Login {
+  position: relative;
+  .loginInput {
+    width: 450px;
+    height: 40px;
+    border: solid 3px $oc-green-2;
+    border-radius: 10px;
+    margin-top: 12px;
+    outline: none;
+    padding-left: 50px;
+    font-size: 16px;
+  }
+
+  .loginIcon {
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 18px;
+    z-index: 1;
+  }
+}
