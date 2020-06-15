@@ -20,10 +20,17 @@ function handleSubmit(idReference, pwReference, event) {
         body: JSON.stringify(loginUser)
     })
     .then(response =>
-        response.json().then(json => {
+        response.text().then(json => {
             console.log(json);
         })
-    );
+    ).catch(error => {
+        if(error.status === 401) {
+            console.log('Your Username or Password is incorrect. Please try again!')
+        }
+        else {
+            console.log(error.message || 'Sorry! Something went wrong. Please try again!')
+        }
+    });
 }
 
 function LoginForm() {
